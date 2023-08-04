@@ -44,8 +44,8 @@ function generateList(array, domainExtension) {
   for (let i = 0; i < array.length; i++) {
     let dom = domainExtension;
     let list = document.createElement("li");
+    list.classList.add("list-group-item", "text-start");
     list.innerHTML = array[i];
     document.getElementById(dom).appendChild(list);
-    document.getElementById(dom).className = "text-start";
   }
 }
