@@ -38,8 +38,8 @@ const generateDomain = (arr1, arr2, arr3, extension) => {
 let domainUs = generateDomain(pronoun, adj, noun, ".us");
 let domainOrg = generateDomain(pronoun, adj, noun, ".org");
 let domainEdu = generateDomain(pronoun, adj, noun, ".edu");
-
 console.log(generateDomain(pronoun, adj, noun, ".com"));*/
+
 function generateList(array, domainExtension) {
   for (let i = 0; i < array.length; i++) {
     let dom = domainExtension;
