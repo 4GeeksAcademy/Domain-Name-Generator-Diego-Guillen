@@ -37,15 +37,15 @@ const generateDomain = (arr1, arr2, arr3, extension) => {
 /*let domainCom = generateDomain(pronoun, adj, noun, ".com");
 let domainUs = generateDomain(pronoun, adj, noun, ".us");
 let domainOrg = generateDomain(pronoun, adj, noun, ".org");
-let domainEdu = generateDomain(pronoun, adj, noun, ".edu");*/
+let domainEdu = generateDomain(pronoun, adj, noun, ".edu");
 
-console.log(generateDomain(pronoun, adj, noun, ".com"));
+console.log(generateDomain(pronoun, adj, noun, ".com"));*/
 function generateList(array, domainExtension) {
   for (let i = 0; i < array.length; i++) {
     let dom = domainExtension;
     let list = document.createElement("li");
     list.innerHTML = array[i];
     document.getElementById(dom).appendChild(list);
-    document.getElementById(dom).className = "list-group-item";
+    document.getElementById(dom).className = "text-start";
   }
 }
