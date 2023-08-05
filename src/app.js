@@ -24,10 +24,10 @@ let noun = ["jogger", "racoon"];
 const generateDomain = (arr1, arr2, arr3, extension) => {
   let domain = [];
   let count = 0;
-  for (let i = 0; i < arr1.length; i++) {
-    for (let j = 0; j < arr2.length; j++) {
-      for (let z = 0; z < arr3.length; z++) {
-        domain[count] = arr1[i] + arr2[j] + arr3[z] + extension;
+  for (let str1 of arr1) {
+    for (let str2 of arr2) {
+      for (let str3 of arr3) {
+        domain[count] = str1 + str2 + str3 + extension;
         count++;
       }
     }
@@ -39,13 +39,13 @@ let domainUs = generateDomain(pronoun, adj, noun, ".us");
 let domainOrg = generateDomain(pronoun, adj, noun, ".org");
 let domainEdu = generateDomain(pronoun, adj, noun, ".edu");
 console.log(generateDomain(pronoun, adj, noun, ".com"));*/
-
-function generateList(array, domainExtension) {
-  for (let i = 0; i < array.length; i++) {
-    let dom = domainExtension;
-    let list = document.createElement("li");
-    list.classList.add("list-group-item", "text-start");
-    list.innerHTML = array[i];
-    document.getElementById(dom).appendChild(list);
+// Esta funcion recibe el array con los nombres generados, y el id de la <ul> en html.
+function generateList(array, idTagUl) {
+  //idTagUl es el ID de la <ul> html donde se quiere agregar un <li>
+  for (let nameGenerated of array) {
+    let list = document.createElement("li"); //crea una <li>
+    list.classList.add("list-group-item", "text-start"); //agrega clases Boostrap para el estilo
+    list.innerHTML = nameGenerated; //agrego el contenido a la <li> creada
+    document.getElementById(idTagUl).appendChild(list); // agrega la <li> a la <ul> con el id = idTagUl
   }
 }
