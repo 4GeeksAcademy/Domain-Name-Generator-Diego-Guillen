@@ -14,7 +14,7 @@ window.onload = function() {
   let arrayOrg = generateDomain(pronoun, adj, noun, ".org");
   generateList(arrayOrg, "org");
   let arrayEdu = generateDomain(pronoun, adj, noun, ".edu");
-  generateList(arrayUs, "edu");
+  generateList(arrayEdu, "edu");
 };
 
 let pronoun = ["the", "our"];
@@ -34,12 +34,6 @@ const generateDomain = (arr1, arr2, arr3, extension) => {
   }
   return domain;
 };
-/*let domainCom = generateDomain(pronoun, adj, noun, ".com");
-let domainUs = generateDomain(pronoun, adj, noun, ".us");
-let domainOrg = generateDomain(pronoun, adj, noun, ".org");
-let domainEdu = generateDomain(pronoun, adj, noun, ".edu");
-console.log(generateDomain(pronoun, adj, noun, ".com"));*/
-// Esta funcion recibe el array con los nombres generados, y el id de la <ul> en html.
 function generateList(array, idTagUl) {
   //idTagUl es el ID de la <ul> html donde se quiere agregar un <li>
   for (let nameGenerated of array) {
